@@ -1,0 +1,23 @@
+.section-solution{
+  color: #fff;
+  &__header{
+    background-image: url('https://www.mai.ai/wp-content/uploads/2021/09/BM_Hero_4.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 488px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__subtitle{
+      text-align: center;
+      font-size: 2em;
+      margin: 15px 0;
+    }
+  }
+
+  &__blocks-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

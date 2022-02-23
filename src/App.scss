@@ -1,0 +1,9 @@
+.app {
+  font-family: gotham pro, Gotham pro;
+
+  &__header {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+  }
+}

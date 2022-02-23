@@ -1,0 +1,126 @@
+@import './_variables.scss';
+
+.menu {
+  background-color: $menu-bg-color;
+  width: 100%;
+  max-height: 0;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  transition: max-height .2s ease-out;
+
+  &__btn:checked ~ & {
+    max-height: 240px;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &__icon {
+    float: right;
+    cursor: pointer;
+    padding: 20px;
+    height: 100%;
+    position: relative;
+    user-select: none;
+  }
+
+  &__btn:checked~&__icon .navicon {
+    background: transparent;
+  }
+
+  &__btn:checked~&__icon .navicon:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
+
+  &__btn:checked~&__icon .navicon:after {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+  &__btn:checked~&__icon:not(.steps) .navicon:before,
+  &__btn:checked~&__icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+  a {
+    color: $menu-item-color;
+  }
+
+  li a {
+    text-align: center;
+    font-size: .8rem;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+
+}
+
+.navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+
+  &:before,
+  &:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  &:before {
+    top: 5px;
+  }
+
+  &:after {
+    top: -5px;
+  }
+
+}
+
+// TODO- menu item hover animation
+.menu li a{
+  &::after{
+
+  }
+  &:hover{
+
+  }
+}
+
+
+// RWD
+
+@media screen and (min-width:767px) {
+  .menu {
+    background-color: transparent;
+    max-height: none;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    &__icon {
+      display: none;
+    }
+  }
+}
+

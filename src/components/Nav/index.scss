@@ -1,0 +1,21 @@
+@import './_variables.scss';
+@import './menu.scss';
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: $bg-color;
+
+  &__img-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100px;
+    max-width: 100%;
+  }
+}
